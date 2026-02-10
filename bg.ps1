@@ -1,4 +1,4 @@
-$u = 'https://tiny.cc/cigany'      # prank image
+$u = 'https://github.com/Levente2432/cig/blob/main/Bivaly-szalami.jpg'      # prank image
 $p = "$env:TEMP\bg.jpg"
 Invoke-WebRequest $u -OutFile $p
 
