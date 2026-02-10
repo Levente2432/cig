@@ -1,19 +1,6 @@
-param(
-    # IDE ÍRD BE A SAJÁT GITHUB KÉP-URL-T
-    [string]$ImageUrl = "https://github.com/Levente2432/cig/blob/main/kep.jpg"
-)
+$u = 'https://example.com/bg.jpg'      # prank image
+$p = "$env:TEMP\bg.jpg"
+Invoke-WebRequest $u -OutFile $p
 
-# Hova mentse le ideiglenesen a képet
-$LocalPath = "$env:TEMP\github-bg.png"
-
-try {
-    # Kép letöltése a GitHub URL-ről
-    Invoke-WebRequest -Uri $ImageUrl -OutFile $LocalPath -UseBasicParsing
-
-    # Háttérkép beállítása a letöltött fájlra
-    Set-ItemProperty -Path 'HKCU:\Control Panel\Desktop\' -Name wallpaper -Value $LocalPath
-    rundll32.exe user32.dll, UpdatePerUserSystemParameters 1, True
-}
-catch {
-    Write-Host "Hiba történt a kép letöltése vagy beállítása közben: $($_.Exception.Message)"
-}
+Add-Type 'using System;using System.Runtime.InteropServices;public class W{[DllImport("user32.dll")]public static extern int SystemParametersInfo(int a,int b,string c,int d);}'
+[W]::SystemParametersInfo(20,0,$p,3)
