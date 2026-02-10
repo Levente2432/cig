@@ -1,4 +1,4 @@
-$u = 'https://www.alleycat.org/wp-content/uploads/2019/03/FELV-cat.jpg'      # prank image
+$u = 'https://images.squarespace-cdn.com/content/v1/607f89e638219e13eee71b1e/1684821560422-SD5V37BAG28BURTLIXUQ/michael-sum-LEpfefQf4rU-unsplash.jpg'      # prank image
 $p = "$env:TEMP\bg.jpg"
 Invoke-WebRequest $u -OutFile $p
 
