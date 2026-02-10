@@ -1,4 +1,4 @@
-$u = 'https://www.tierschutzbund.de/fileadmin/_processed_/5/e/csm_Katzen_auf_Seite_liegend_getigert_c_dtschb-sabine-muench.de_d938e9c934.jpg'      # prank image
+$u = 'https://i.imgur.com/Oj2ea4v.png'      # prank image
 $timestamp = Get-Date -Format "yyyyMMddHHmmss"
 $p = "$env:TEMP\bga_$timestamp.jpg"
 
