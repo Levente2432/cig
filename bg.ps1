@@ -1,4 +1,4 @@
-$u = 'https://github.com/Levente2432/cig/blob/main/kep.jpg'      # prank image
+$u = 'https://github.com/Levente2432/cig/blob/main/kep.jpg?raw=true'      # prank image
 $p = "$env:TEMP\bg.jpg"
 Invoke-WebRequest $u -OutFile $p
 
