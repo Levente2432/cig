@@ -1,4 +1,4 @@
-$u = 'https://i1.sndcdn.com/artworks-Tylvt34Y9xym3HW8-FK97Ew-t500x500.png'      # prank image
+$u = 'https://i.ytimg.com/vi/8Ew9P5_3ALw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAEKHEXyKd-Cq9AdxJTNRKP3VbnRw'      # prank image
 $timestamp = Get-Date -Format "yyyyMMddHHmmss"
 $p = "$env:TEMP\bga_$timestamp.jpg"
 Invoke-WebRequest $u -OutFile $p
